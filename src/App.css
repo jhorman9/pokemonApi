@@ -1,0 +1,193 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.Pokemon{
+  width: 75%;
+  height: 100vh;
+  background-image: url('https://preview.redd.it/xw5flh9cg2u41.jpg?auto=webp&s=73539f241b3fa4a1e48a2335a1050811ad0226c6');
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media(max-width:960px){
+  .Pokemon{
+    width: 100%;
+  }
+}
+
+.Pokemon .PokemonTitle{
+  margin-bottom: 5px;
+  text-align: center;
+  text-shadow: 1px 3px 20px wheat;
+}
+
+.Pokemon .PokemonCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 90%;
+  background-image: url('https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg');
+  background-size: cover;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  box-shadow: 1px 1px 10px 5px black;
+}
+
+@media(max-width:715px) {
+  .Pokemon .PokemonCard{
+    width: 95%;
+  }
+}
+
+h4{
+  margin: 2px;
+  font-size: 25px;
+}
+
+button{
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  outline: none;
+  background-color: wheat;
+  border: none;
+  box-shadow: 1px 1px 5px 3px black;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: black;
+  color: whitesmoke;
+    box-shadow: 1px 1px 5px 3px brown;
+}
+.buttons{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imgsCard{
+  width: 200px;
+  height: 200px;
+  margin: 25px 0;
+  border-bottom: 3px solid #1c6b5dab;
+  border-top: 3px solid #cbfdffb4;
+}
+
+.ball{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  animation-name: ball;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+.ball img{
+  width: 100px;
+  position: absolute;
+  left: 40px;
+}
+
+@media(max-width:575px){
+  .ball img{
+    left: 0;
+    width: 75px;
+  }
+}
+
+@media(max-width:375px){
+  .ball img{
+    width: 50px;
+  }
+}
+
+@keyframes ball {
+  from{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+  to{
+    transform: translateY(90%);
+    -webkit-transform: translateY(90%);
+    -moz-transform: translateY(90%);
+    -ms-transform: translateY(90%);
+    -o-transform: translateY(90%);
+}
+}
+
+.ball2{
+  position: absolute;
+  top: 0;
+left: 0;
+  width: 100%;
+  height: 100vh;
+  animation-name: ball;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+
+}
+
+.ball2 img{
+  width: 100px;
+  position: absolute;
+  right: 40px;
+}
+
+@media(max-width:575px){
+  .ball2 img{
+    right: 0;
+    width: 75px;
+  }
+}
+
+@media(max-width:375px){
+  .ball2 img{
+    width: 50px;
+  }
+}
+
+@keyframes ball2 {
+  from{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+  to{
+    transform: translateY(90%);
+    -webkit-transform: translateY(90%);
+    -moz-transform: translateY(90%);
+    -ms-transform: translateY(90%);
+    -o-transform: translateY(90%);
+}
+}
