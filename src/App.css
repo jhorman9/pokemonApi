@@ -24,18 +24,6 @@ body{
   }
 }
 
-.Pokemon .PokemonTitle{
-  margin-bottom: 5px;
-  text-align: center;
-  text-shadow: 1px 3px 20px wheat;
-}
-
-@media(max-width:715px) {
-  .Pokemon .PokemonTitle{
-    margin-top: 5px;
-  }
-}
-
 .Pokemon .PokemonCard{
   display: flex;
   justify-content: center;
