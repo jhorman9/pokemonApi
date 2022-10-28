@@ -23,7 +23,6 @@ const Pokemon = () => {
 
     return (
         <div className='Pokemon'>
-            <h1 className='PokemonTitle'>Pokemon</h1>
             <div className="PokemonCard">
                 <h4> Name:{pokemon.name}</h4>
                 <img className='imgsCard' src={pokemon.sprites?.other.dream_world.front_default} />
