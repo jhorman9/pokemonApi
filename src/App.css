@@ -1,7 +1,9 @@
 body{
   margin: 0;
   box-sizing: border-box;
-  background-color: black;
+  background-image: url('http://i.imgur.com/eVcYPSa.png');
+  background-size: cover;
+  background-position: top;
   color: whitesmoke;
   overflow: hidden;
 }
