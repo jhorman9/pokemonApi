@@ -24,20 +24,15 @@ body{
   }
 }
 
-.Pokemon .PokemonTitle{
-  margin-bottom: 5px;
-  text-align: center;
-  text-shadow: 1px 3px 20px wheat;
-}
-
 .Pokemon .PokemonCard{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 700px;
-  height: 90%;
-  background-image: url('https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg');
+  height: 85%;
+  background-image:
+  url('https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg');
   background-size: cover;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -45,6 +40,27 @@ body{
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
   box-shadow: 1px 1px 10px 5px black;
+  margin: 0;
+  animation-name: move;
+  animation-duration: 5s;
+}
+
+@keyframes move {
+  from{
+    transform:translateY(-100%);
+    -webkit-transform:translateY(-100%);
+    -moz-transform:translateY(-100%);
+    -ms-transform:translateY(-100%);
+    -o-transform:translateY(-100%);
+}
+
+  to{
+    transform:translateY(0);
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+}
 }
 
 @media(max-width:715px) {
@@ -53,9 +69,16 @@ body{
   }
 }
 
+
 h4{
   margin: 2px;
   font-size: 25px;
+}
+
+.namePokemon{
+  font-size: 45px;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 10px wheat;
 }
 
 button{
@@ -80,6 +103,12 @@ button:hover{
   color: whitesmoke;
     box-shadow: 1px 1px 5px 3px brown;
 }
+
+span{
+  color: #b57c45;
+  text-shadow: 0 0 5px black;
+  font-weight: 900;
+}
 .buttons{
   display: flex;
   width: 100%;
@@ -90,7 +119,7 @@ button:hover{
 .imgsCard{
   width: 200px;
   height: 200px;
-  margin: 25px 0;
+  margin: 10px 0;
   border-bottom: 3px solid #1c6b5dab;
   border-top: 3px solid #cbfdffb4;
 }
@@ -99,7 +128,7 @@ button:hover{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 97vh;
   animation-name: ball;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -149,7 +178,7 @@ button:hover{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 97vh;
   animation-name: ball;
   animation-duration: 10s;
   animation-iteration-count: infinite;

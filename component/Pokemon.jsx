@@ -23,16 +23,15 @@ const Pokemon = () => {
 
     return (
         <div className='Pokemon'>
-            <h1 className='PokemonTitle'>Pokemon</h1>
             <div className="PokemonCard">
-                <h4> Name:{pokemon.name}</h4>
+                <h4 className='namePokemon'><span>{pokemon.name}</span></h4>
                 <img className='imgsCard' src={pokemon.sprites?.other.dream_world.front_default} />
-                <h4> Weight: {isHectograms ? pokemon.weight : pokemon.weight/10}
+                <h4><span>Weight:</span> {isHectograms ? pokemon.weight : pokemon.weight/10}
                  {isHectograms ? " Hectograms" : " Kg"}</h4>
                 {/* pokemon.height/ 10 => metros */}
                 {/* pokemon.height => decimeters */}
-                <h4>Height: {isDecimeters ? pokemon.height : pokemon.height / 10} {isDecimeters ? " Decimeters" : " Meter"}</h4>
-                <h4>Types: {pokemon.types?.[0].type.name}</h4>
+                <h4><span>Height:</span> {isDecimeters ? pokemon.height : pokemon.height / 10} {isDecimeters ? " Decimeters" : " Meter"}</h4>
+                <h4><span>Types:</span> {pokemon.types?.[0].type.name}</h4>
                 <div className="buttons">
                     <button onClick={() => setIsDecimeters(!isDecimeters)}>Change Height</button>
                     <button onClick={() => setIsHectograms(!isHectograms)}>Change Weight</button>
