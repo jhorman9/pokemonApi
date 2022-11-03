@@ -28,7 +28,7 @@ const Pokemon = () => {
     <>
         {isLoading ? (
             <div className='loadingg'>
-                <h2>Cargando...</h2>
+                <h1>Cargando...</h1>
             </div>
         ) : ( 
         <>
