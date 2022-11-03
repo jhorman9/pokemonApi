@@ -7,13 +7,16 @@ const Pokemon = () => {
     const [pokemon, setPokemon] = useState({});
     const [isDecimeters, setIsDecimeters] = useState(true)
     const [isHectograms, setIsHectograms] = useState(true)
-    
+    const [isLoading, setIsLoading] = useState(true)
     //Generar un numero random
     const randomId = Math.floor(Math.random() * 600)+1;
     //Crear useEffect
     useEffect(() =>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}/`)
-        .then(res => setPokemon(res.data))
+        .then((res) => {
+        setIsLoading(false);
+        setPokemon(res.data);
+    })
     }, []);
     
     const changePokemon = () =>{
@@ -22,6 +25,11 @@ const Pokemon = () => {
     }
 
     return (
+    <>
+        {isLoading ? (
+            <h2>Cargando...</h2>
+        ) : ( 
+        <>
         <div className='Pokemon'>
             <div className="PokemonCard">
                 <h4 className='namePokemon'><span>{pokemon.name}</span></h4>
@@ -40,6 +48,9 @@ const Pokemon = () => {
             </div>
             <br />
         </div>
+        </>
+    )}
+    </>
     );
 };
 
