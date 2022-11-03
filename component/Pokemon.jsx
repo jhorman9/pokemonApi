@@ -27,7 +27,9 @@ const Pokemon = () => {
     return (
     <>
         {isLoading ? (
-            <h2>Cargando...</h2>
+            <div className='loadingg'>
+                <h2>Cargando...</h2>
+            </div>
         ) : ( 
         <>
         <div className='Pokemon'>
@@ -50,7 +52,7 @@ const Pokemon = () => {
         </div>
         </>
     )}
-    </>
+</>
     );
 };
 
